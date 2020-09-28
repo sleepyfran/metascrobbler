@@ -1,0 +1,21 @@
+{
+  "name": "@metascrobbler/ts-config",
+  "version": "0.0.0",
+  "description": "Shared TypeScript configuration",
+  "author": "Fran González <fgonzaleva@icloud.com>",
+  "homepage": "https://github.com/sleepyfran/metascrobbler#readme",
+  "license": "GPL-3.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sleepyfran/metascrobbler.git"
+  },
+  "bugs": {
+    "url": "https://github.com/sleepyfran/metascrobbler/issues"
+  },
+  "peerDependencies": {
+    "typescript": "^4.0.3"
+  },
+  "dependencies": {
+    "rxjs": "^6.6.3"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "name": "@metascrobbler/azure",
+  "version": "0.0.0",
+  "description": "Azure powered version of the scrobbler",
+  "author": "Fran González <fgonzaleva@icloud.com>",
+  "homepage": "https://github.com/sleepyfran/metascrobbler#readme",
+  "license": "GPL-3.0",
+  "main": "lib/azure.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sleepyfran/metascrobbler.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/sleepyfran/metascrobbler/issues"
+  },
+  "dependencies": {
+    "rxjs": "^6.6.3"
+  }
+}

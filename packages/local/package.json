@@ -1,0 +1,42 @@
+{
+  "name": "@metascrobbler/local",
+  "version": "0.0.0",
+  "description": "Local version of the scrobbler",
+  "author": "Fran González <fgonzaleva@icloud.com>",
+  "homepage": "https://github.com/sleepyfran/metascrobbler#readme",
+  "license": "GPL-3.0",
+  "main": "dist/local.js",
+  "typings": "dist/local.d.ts",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sleepyfran/metascrobbler.git"
+  },
+  "scripts": {
+    "check": "tsc --noEmit",
+    "build": "tsc -b",
+    "build-dep": "lerna run build --stream --scope=@metascrobbler/local --include-dependencies"
+  },
+  "bugs": {
+    "url": "https://github.com/sleepyfran/metascrobbler/issues"
+  },
+  "devDependencies": {
+    "@metascrobbler/ts-config": "^0.0.0"
+  },
+  "peerDependencies": {
+    "typescript": "^4.0.3"
+  },
+  "dependencies": {
+    "rxjs": "^6.6.3",
+    "@metascrobbler/core": "^0.0.0"
+  }
+}
