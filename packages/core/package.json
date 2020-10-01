@@ -30,8 +30,7 @@
     "url": "https://github.com/sleepyfran/metascrobbler/issues"
   },
   "devDependencies": {
-    "@metascrobbler/ts-config": "^0.0.0",
-    "@types/node": "^14.11.2"
+    "@metascrobbler/ts-config": "^0.0.0"
   },
   "peerDependencies": {
     "typescript": "^4.0.3"

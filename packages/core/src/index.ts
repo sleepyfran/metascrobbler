@@ -1,20 +1,13 @@
-import { of, from, throwError } from "rxjs";
+import { from } from "rxjs";
 import { mergeMap } from "rxjs/operators";
+import { SecretLoader } from "./interfaces/secret-loader";
 
-export const init = () => checkEnvVariables();
+export const init = (secretLoader: SecretLoader) =>
+  checkEnvVariables(secretLoader);
 
-const checkEnvVariables = () => {
+const checkEnvVariables = (secretLoader: SecretLoader) => {
   const mandatoryVariables = ["spotifyApiKey", "spotifySecretKey"];
-
-  return from(mandatoryVariables).pipe(mergeMap(checkEnvVariable));
+  return from(mandatoryVariables).pipe(mergeMap(secretLoader.load));
 };
 
-const checkEnvVariable = (name: string) => {
-  const value = process.env[name];
-
-  return value
-    ? of(value)
-    : throwError(
-        `Env variable ${name} not available, please add it and re-run the program`
-      );
-};
+export * from "./interfaces/secret-loader";
