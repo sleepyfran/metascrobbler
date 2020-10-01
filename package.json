@@ -1,6 +1,11 @@
 {
   "name": "root",
   "private": true,
+  "scripts": {
+    "build": "lerna bootstrap && lerna run build-dep",
+    "clean": "rm -rf packages/*/dist",
+    "local": "node packages/local/dist/index.js"
+  },
   "devDependencies": {
     "lerna": "^3.22.1",
     "typescript": "^4.0.3"
