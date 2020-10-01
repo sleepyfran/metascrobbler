@@ -3,6 +3,10 @@
   "private": true,
   "scripts": {
     "build": "lerna bootstrap && lerna run build-dep",
+    "build:azure": "lerna run build-dep --scope @metascrobbler/azure && lerna bootstrap",
+    "build:cli": "lerna run build-dep --scope @metascrobbler/cli && lerna bootstrap",
+    "build:core": "lerna run build-dep --scope @metascrobbler/core && lerna bootstrap",
+    "build:local": "lerna run build-dep --scope @metascrobbler/local && lerna bootstrap",
     "clean": "rm -rf packages/*/dist",
     "local": "node packages/local/dist/index.js"
   },
